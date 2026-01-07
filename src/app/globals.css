@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 26, 26, 26;
+    --background-start-rgb: 245, 245, 245;
+    --background-end-rgb: 245, 245, 245;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-start-rgb));
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-primary text-primary-foreground rounded-md px-6 py-2.5 font-medium transition-all hover:opacity-90 active:scale-[0.98];
+    }
+
+    .btn-secondary {
+        @apply bg-secondary text-secondary-foreground border border-border rounded-md px-6 py-2.5 font-medium transition-all hover:bg-white active:scale-[0.98];
+    }
+
+    .card-surface {
+        @apply bg-surface border border-border rounded-lg shadow-card p-6;
+    }
+
+    .badge-pill {
+        @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase;
+    }
+}
